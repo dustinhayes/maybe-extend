@@ -1,0 +1,38 @@
+{
+  "name": "maybe-extend",
+  "version": "1.0.0",
+  "description": "Extend an object with a defaults if the subject object's value is 'falsey'",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "jshint . && babel-node test/maybe-extend.js",
+    "build": "browserify src/index.js -s maybeExtend | uglifyjs > dist/maybeExtend.js"
+  },
+  "browserify": {
+    "transform": [
+      "babelify"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dustinhayes/maybe-extend.git"
+  },
+  "keywords": [
+    "browser",
+    "extend",
+    "defaults"
+  ],
+  "author": "Dustin Hayes <dustinmichaelh@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dustinhayes/maybe-extend/issues"
+  },
+  "homepage": "https://github.com/dustinhayes/maybe-extend",
+  "devDependencies": {
+    "babel": "^5.0.7",
+    "babelify": "^6.0.1",
+    "browserify": "^9.0.6",
+    "jshint": "^2.6.3",
+    "tape": "^4.0.0",
+    "uglify-js": "^2.4.19"
+  }
+}
